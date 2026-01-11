@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle, #0b0b1a, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Center screens */
+#startScreen,
+#messageScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+button {
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+}
+
+/* Typing lines */
+#line {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+/* Birthday text */
+#birthdayText {
+  margin-top: 40px;
+  font-size: 52px;
+  text-shadow: 0 0 20px #ff9ecb;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff4d6d; }
+  to   { text-shadow: 0 0 30px #ffb3c6; }
+}
+
+/* Bottom button */
+#continueBtn {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Story section */
+#story {
+  padding: 120px 30px;
+}
+
+.intro {
+  font-size: 22px;
+  margin-bottom: 80px;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  display: flex;
+  margin: 70px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.5s ease;
+}
+
+.card.right {
+  justify-content: flex-end;
+}
+
+.card-content {
+  max-width: 320px;
+  text-align: center;
+}
+
+.card-box {
+  width: 260px;
+  height: 160px;
+  background: linear-gradient(135deg, #222, #000);
+  border-radius: 14px;
+  border: 1px solid #666;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
